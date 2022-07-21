@@ -6,8 +6,8 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 
-email = 'vk18@gmail.com\n'   
-password = 'vk18rat\n'          
+email = 'vk18@gmail.com\n'   #enter your gmail 
+password = 'vk18rat\n'        #enter your password    
 
 driver = uc.Chrome(use_subprocess=True)
 wait = WebDriverWait(driver, 20)
@@ -18,13 +18,14 @@ wait.until(EC.visibility_of_element_located((By.NAME,'identifier'))).send_keys(e
 wait.until(EC.visibility_of_element_located((By.NAME,'password'))).send_keys(password)
 time.sleep(3)
 
-url = 'https://youtu.be/OKBMCL-frPU'
+url = 'https://youtu.be/OKBMCL-frPU' #change url to your required
 driver.get(url)
 driver.maximize_window() # For maximizing window
 driver.implicitly_wait(20) # gives an implicit wait for 20 seconds
 time.sleep(7)
 #driver.execute_script("window.scrollTo(0, document.body.scrollHeight)")
-driver.find_element_by_css_selector("#contenteditable-root").send_keys("one of the best trailer ever seen")
+#scroll the cursor to comment section
+driver.find_element_by_css_selector("#contenteditable-root").send_keys("one of the best trailer ever seen") #change which text you want to put comment
 time.sleep(3)
 driver.find_element_by_css_selector("#contenteditable-root").send_keys("amazing one")
 time.sleep(2)
@@ -34,26 +35,10 @@ driver.find_element_by_css_selector("#contenteditable-root").send_keys("wonderfu
 time.sleep(2)
 driver.find_element_by_css_selector("#contenteditable-root").send_keys("fantastic")
 time.sleep(2)
-driver.find_element_by_css_selector("#button").click()
+#driver.find_element_by_css_selector("#button").click() #the comment button blue color not accepting if i find i will update
 time.sleep(30)
 
-#driver.execute_script("window.scrollTo(0, document.body.scrollHeight)")
-#driver.find_element_by_css_selector('#movie_player > div.ytp-chrome-bottom > div.ytp-chrome-controls > div.ytp-left-controls > button').click()
-#driver.find_element_by_css_selector("#button").click()
-#comment= driver.find_element_by_id("contenteditable-root")
-#comment.send_keys("game")
-#comment = driver.find_element_by_id("text").click()
-#from selenium.common.exceptions import NoSuchElementException
-#try:
-    #user_name = driver.find_element_by_name("userName")
-    #user_name.send_keys("mercury")
-#except NoSuchElementException:
-    #print("exception handled")
-    
-    #comment= driver.find_element_by_id("contenteditable-root")
-#comment.send_keys("game")
-#comment = driver.find_element_by_id("text").click()
-    
+
     
 
 
