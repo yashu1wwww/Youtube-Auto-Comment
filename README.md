@@ -6,5 +6,3 @@ Youtube Auto Comments #Replace Email and Pass in 9 & 10 line and replace 21 line
 👉Python Install Setup=https://youtu.be/4bUOrMj88Pc
 
 👉 YouTube Auto Cmts Using Python
-
-https://youtu.be/dj_JlT_eqmU
