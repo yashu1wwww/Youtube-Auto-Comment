@@ -21,7 +21,7 @@ time.sleep(3)
 
 #upto the above the codes credits goes to https://github.com/xtekky these man
 
-url = 'https://youtu.be/KPnhi2WFxhk' #change to your required url
+url = 'https://youtu.be/NbnsqGI0Yj4' #change to your required url
 driver.get(url)
 time.sleep(3) #if video contains ads means change 3 into 10 or 12
 
