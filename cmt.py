@@ -1,16 +1,17 @@
 import undetected_chromedriver as uc
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 
-email = 'vk18@gmail.com\n'   #enter your gmail 
-password = 'vk18rat\n'        #enter your password    
+email = 'dotnknow@gmail.com\n'   #change to your mail id
+password = 'pass1@#$\n'           #change to your pass  
 
 driver = uc.Chrome(use_subprocess=True)
-wait = WebDriverWait(driver, 20)
+wait = WebDriverWait(driver,20)
 url = 'https://accounts.google.com/AddSession?continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den-GB%26next%3D%252F&hl=en-GB&passive=false&service=youtube&uilel=0'
 driver.get(url)
 
@@ -18,27 +19,56 @@ wait.until(EC.visibility_of_element_located((By.NAME,'identifier'))).send_keys(e
 wait.until(EC.visibility_of_element_located((By.NAME,'password'))).send_keys(password)
 time.sleep(3)
 
-#upto the above the codes credits goes to https://github.com/xtekky these man
-
-url = 'https://youtu.be/OKBMCL-frPU' #change url to your required
+url = 'https://youtu.be/KPnhi2WFxhk' #change to your required url
 driver.get(url)
-driver.maximize_window() # For maximizing window
-driver.implicitly_wait(20) # gives an implicit wait for 20 seconds
-time.sleep(7)
-#driver.execute_script("window.scrollTo(0, document.body.scrollHeight)")
-#scroll the cursor to comment section
-driver.find_element_by_css_selector("#contenteditable-root").send_keys("one of the best trailer ever seen") #change which text you want to put comment
+time.sleep(3) #if video contains ads means change 3 into 10 or 12
+
+driver.find_element_by_css_selector('#movie_player > div.ytp-chrome-bottom > div.ytp-chrome-controls > div.ytp-left-controls > button').click()
+
+#time.sleep(3)
+
+driver.execute_script("window.scrollTo(0, 600);")
+
+WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.CSS_SELECTOR, "ytd-comments ytd-comment-simplebox-renderer")))
+
+driver.find_element_by_css_selector("ytd-comments ytd-comment-simplebox-renderer div#placeholder-area").click()
+
+driver.find_element_by_css_selector("#contenteditable-root").send_keys("Amazing") #change cmt to your required 
+
+time.sleep(2)
+
+send_comment_button = driver.find_element_by_id("submit-button").click()
+
 time.sleep(3)
-driver.find_element_by_css_selector("#contenteditable-root").send_keys("amazing one")
+
+WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.CSS_SELECTOR, "ytd-comments ytd-comment-simplebox-renderer")))
+
+driver.find_element_by_css_selector("ytd-comments ytd-comment-simplebox-renderer div#placeholder-area").click()
+
+driver.find_element_by_css_selector("#contenteditable-root").send_keys("wonderful")  #change cmt to your required 
+
 time.sleep(2)
-driver.find_element_by_css_selector("#contenteditable-root").send_keys("great one")
+
+send_comment_button = driver.find_element_by_id("submit-button").click()
+
+time.sleep(3)
+    
+WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.CSS_SELECTOR, "ytd-comments ytd-comment-simplebox-renderer")))
+
+driver.find_element_by_css_selector("ytd-comments ytd-comment-simplebox-renderer div#placeholder-area").click()
+
+driver.find_element_by_css_selector("#contenteditable-root").send_keys("awesome")  #change cmt to your required 
+
 time.sleep(2)
-driver.find_element_by_css_selector("#contenteditable-root").send_keys("wonderful")
-time.sleep(2)
-driver.find_element_by_css_selector("#contenteditable-root").send_keys("fantastic")
-time.sleep(2)
-#driver.find_element_by_css_selector("#button").click() #the comment button blue color not accepting if i find i will update
-time.sleep(30)
+
+send_comment_button = driver.find_element_by_id("submit-button").click()
+
+time.sleep(5)
+
+driver.close()
+
+#i putted 3 cmts to post cmt automatically if you want more then copy line 54 to 64 and dont forgot to change cmt text if you want more cmts repeat these code paste again and again
+
 
 
     
