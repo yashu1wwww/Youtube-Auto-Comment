@@ -19,6 +19,8 @@ wait.until(EC.visibility_of_element_located((By.NAME,'identifier'))).send_keys(e
 wait.until(EC.visibility_of_element_located((By.NAME,'password'))).send_keys(password)
 time.sleep(3)
 
+#upto the above the codes credits goes to https://github.com/xtekky these man
+
 url = 'https://youtu.be/KPnhi2WFxhk' #change to your required url
 driver.get(url)
 time.sleep(3) #if video contains ads means change 3 into 10 or 12
@@ -29,7 +31,7 @@ driver.find_element_by_css_selector('#movie_player > div.ytp-chrome-bottom > div
 
 driver.execute_script("window.scrollTo(0, 600);")
 
-WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.CSS_SELECTOR, "ytd-comments ytd-comment-simplebox-renderer")))
+WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.CSS_SELECTOR, "ytd-comments ytd-comment-simplebox-renderer"))) #these code copied from stackoverflow
 
 driver.find_element_by_css_selector("ytd-comments ytd-comment-simplebox-renderer div#placeholder-area").click()
 
