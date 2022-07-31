@@ -29,9 +29,11 @@ driver.find_element_by_css_selector('#movie_player > div.ytp-chrome-bottom > div
 
 #time.sleep(3)
 
-driver.execute_script("window.scrollTo(0, 600);")
+driver.execute_script("window.scrollTo(0, 600);")  #these code copied from stackoverflow
 
 WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.CSS_SELECTOR, "ytd-comments ytd-comment-simplebox-renderer"))) #these code copied from stackoverflow
+
+#the below codes was made my me
 
 driver.find_element_by_css_selector("ytd-comments ytd-comment-simplebox-renderer div#placeholder-area").click()
 
