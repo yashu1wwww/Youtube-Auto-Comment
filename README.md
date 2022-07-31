@@ -13,3 +13,4 @@ enter cmt.py or cmt in cmd or in python idle
 👉Python Install Setup=https://youtu.be/4bUOrMj88Pc
 
 👉 YouTube Auto Cmts Using Python 
+https://youtu.be/JJmyzyBl5bE
