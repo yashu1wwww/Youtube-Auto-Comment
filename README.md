@@ -1,14 +1,20 @@
 # Youtube-Auto-Comment
 Youtube Auto Comment Using Python
 
-Youtube Auto Comments #Replace Email and Pass in 10 & 11 line and replace 24 line with url After download the folder extract it and open cmd and enter Python If You Find Python Version
-Then enter pip install undetected_chromedriver,
+#Replace Email and Pass in 14 & 15 line and also 
 
-and Pip install Proxy  in cmd 
+change the cmt text if you needed to your required cmts in 11th line
+
+After download the folder extract it and open cmd and enter Python If You Find Python Version
+
+Then enter pip install undetected_chromedriver in cmd and hit enter button (internet connection will be in on)
+
+and enter pip install random in cmd and hit enter button
+
+and Pip install Proxy in cmd and hit enter button
 
 After download the chromedriver(https://chromedriver.chromium.org/downloads extract these to downloaded folder)and with matches your chrome version of your pc 
 
-enter cmt.py or cmt in cmd or in python idle
 
 👉Python Install Setup=https://youtu.be/4bUOrMj88Pc
 
