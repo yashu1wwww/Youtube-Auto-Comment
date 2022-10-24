@@ -25,7 +25,6 @@ wait.until(EC.visibility_of_element_located((By.NAME,'Passwd'))).send_keys(passw
 time.sleep(2)
 
 url = 'https://youtu.be/NbnsqGI0Yj4'  #change to your required url
-
 driver.get(url)
 
 time.sleep(5)
