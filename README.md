@@ -15,6 +15,7 @@ and Pip install Proxy in cmd and hit enter button
 
 After download the chromedriver(https://chromedriver.chromium.org/downloads extract these to downloaded folder)and with matches your chrome version of your pc 
 
+enter cmt.py in cmd on that particular folder or double click on cmt.py
 
 👉Python Install Setup=https://youtu.be/4bUOrMj88Pc
 
@@ -26,7 +27,11 @@ https://youtu.be/JJmyzyBl5bE
 👉if your selenium version is in latest version then 
 the code never run 
 
-👉open cmd and enter pip uninstall selenium
+👉open cmd and 
+
+enter 
+
+pip uninstall selenium
 
 And enter 
 
