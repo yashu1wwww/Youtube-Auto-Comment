@@ -3,6 +3,8 @@ Youtube Auto Comment Using Python
 
 #Replace Email and Pass in 14 & 15 line and also 
 
+note:-use accounts which dont have 2-factor authentication...
+
 change the cmt text if you needed to your required cmts in 11th line
 
 After download the folder extract it and open cmd and enter Python If You Find Python Version
